@@ -128,10 +128,6 @@ const projects = [
   tags: ["HTML", "CSS", "JavaScript", "Web"]
 }
 
-
-  
- 
-
 ]
 
 export function ProjectsSection() {
@@ -145,11 +141,11 @@ export function ProjectsSection() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"])
 
   return (
-    <motion.section ref={ref} style={{ y }} className="py-20 px-4 bg-muted/30 relative overflow-hidden">
+    <motion.section ref={ref} style={{ y }} className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
       <motion.div style={{ y: backgroundY }} className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-1/4 w-72 h-72 bg-secondary/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-1/3 w-56 h-56 bg-primary/30 rounded-full blur-2xl" />
-        <div className="absolute top-1/3 right-10 w-40 h-40 bg-secondary/20 rounded-full blur-xl" />
+        <div className="absolute top-10 sm:top-20 right-1/4 w-40 h-40 sm:w-72 sm:h-72 bg-secondary/30 rounded-full blur-2xl sm:blur-3xl" />
+        <div className="absolute bottom-5 sm:bottom-10 left-1/3 w-32 h-32 sm:w-56 sm:h-56 bg-primary/30 rounded-full blur-xl sm:blur-2xl" />
+        <div className="absolute top-1/3 right-5 sm:right-10 w-24 h-24 sm:w-40 sm:h-40 bg-secondary/20 rounded-full blur-lg sm:blur-xl" />
       </motion.div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -158,15 +154,15 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Proyectos Destacados</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 px-4">Proyectos Destacados</h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Una selección de mis proyectos más relevantes disponibles en GitHub
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -174,14 +170,15 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="w-full"
             >
-              <Card className="h-full hover:shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-primary/20 group backdrop-blur-sm bg-background/90">
+              <Card className="h-full hover:shadow-lg transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-primary/20 group backdrop-blur-sm bg-background/90">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <motion.img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
-                    whileHover={{ scale: 1.1 }}
+                    className="w-full h-36 sm:h-44 md:h-48 object-cover"
+                    whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                   />
                   <motion.div
@@ -189,53 +186,61 @@ export function ProjectsSection() {
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                   >
-                    <motion.div
-                      initial={{ y: 20, opacity: 0 }}
-                      whileHover={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.1 }}
-                    >
-                      <Button size="sm" variant="secondary" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 mr-1" />
-                          Código
-                        </a>
-                      </Button>
-                    </motion.div>
+                    {project.githubUrl && (
+                      <motion.div
+                        initial={{ y: 20, opacity: 0 }}
+                        whileHover={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.1 }}
+                      >
+                        <Button size="sm" variant="secondary" asChild className="text-xs sm:text-sm">
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                            <span className="hidden xs:inline">Código</span>
+                            <span className="xs:hidden">Code</span>
+                          </a>
+                        </Button>
+                      </motion.div>
+                    )}
                     <motion.div
                       initial={{ y: 20, opacity: 0 }}
                       whileHover={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.2 }}
                     >
-                      <Button size="sm" variant="secondary" asChild>
+                      <Button size="sm" variant="secondary" asChild className="text-xs sm:text-sm">
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-1" />
-                          Demo
+                          <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+                          <span className="hidden xs:inline">Demo</span>
+                          <span className="xs:hidden">Ver</span>
                         </a>
                       </Button>
                     </motion.div>
                   </motion.div>
                 </div>
 
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <CardHeader className="p-3 sm:p-4 md:p-6">
+                  <div className="flex items-start justify-between gap-2">
+                    <CardTitle className="text-lg sm:text-xl leading-tight">{project.title}</CardTitle>
+                    <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-muted-foreground flex-shrink-0">
                       <motion.div className="flex items-center gap-1" whileHover={{ scale: 1.1 }}>
-                        <Star className="w-3 h-3" />
-                        {project.stars}
+                        <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <span className="hidden xs:inline">{project.stars}</span>
+                        <span className="xs:hidden text-xs">{project.stars}</span>
                       </motion.div>
                       <motion.div className="flex items-center gap-1" whileHover={{ scale: 1.1 }}>
-                        <GitFork className="w-3 h-3" />
-                        {project.forks}
+                        <GitFork className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                        <span className="hidden xs:inline">{project.forks}</span>
+                        <span className="xs:hidden text-xs">{project.forks}</span>
                       </motion.div>
                     </div>
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                <CardContent className="space-y-3 sm:space-y-4 p-3 sm:p-4 md:p-6 pt-0">
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">
+                    {project.description}
+                  </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <motion.div
                         key={tech}
@@ -245,7 +250,7 @@ export function ProjectsSection() {
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.05 }}
                       >
-                        <Badge variant="outline" className="text-xs">
+                        <Badge variant="outline" className="text-xs px-2 py-0.5 sm:px-2.5 sm:py-1">
                           {tech}
                         </Badge>
                       </motion.div>
@@ -262,7 +267,7 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-12"
         >
          
         </motion.div>
