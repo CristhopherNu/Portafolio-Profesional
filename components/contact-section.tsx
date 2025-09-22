@@ -126,10 +126,6 @@ ${formData.message}
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
-            <Briefcase className="w-3 h-3 sm:w-4 sm:h-4" />
-            Disponible para Oportunidades
-          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent px-2">
             ¿Me Quieres Contratar?
           </h2>

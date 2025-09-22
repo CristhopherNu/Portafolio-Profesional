@@ -8,126 +8,118 @@ import { Github, ExternalLink, Star, GitFork } from "lucide-react"
 import { useRef } from "react"
 
 const projects = [
- {
-  title: "Huellas de Amor",
-  description: "Plataforma web para la Fundación Huellas de Amor, dedicada al rescate y cuidado de perros y gatos abandonados o en situación de vulnerabilidad. La plataforma facilita la adopción responsable, donaciones y voluntariado para ayudar a estos animales a encontrar un hogar lleno de amor.",
-  image: "/img/HuellasdeAmor.png", // Imagen que refleje el proyecto de rescate animal
-  technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-  githubUrl: "https://github.com/CristhopherNu/Huellas-de-amor",
-  liveUrl: "https://cristhophernu.github.io/Huellas-de-amor/",
-  stars: 124,
-  forks: 32,
-  
-  // Información adicional específica del proyecto
-  features: [
-    "Sistema de adopciones en línea",
-    "Galería de animales disponibles",
-    "Portal de donaciones",
-    "Gestión de voluntarios",
-    "Historias de éxito",
-    "Sistema de contacto y seguimiento"
-  ],
-  
-  // Botones de acción
-  buttons: {
-    preview: {
-      text: "Vista Previa",
-      url: "https://cristhophernu.github.io/Huellas-de-amor/",
-      icon: "Eye"
-    },
-    demo: {
-      text: "Ver Demo",
-      url: "https://cristhophernu.github.io/Huellas-de-amor/",
-      icon: "ExternalLink"
-    },
-    code: {
-      text: "Ver Código",
-      url: "https://github.com/CristhopherNu/Huellas-de-amor",
-      icon: "Github"
-    }
-  },
-  
-  // Categoría del proyecto
-  category: "Impacto Social",
-  tags: ["Adopción", "Rescate Animal", "ONG", "Voluntariado", "Donaciones"]
-}, 
   {
-  title: "POS de Honduras",
-  description: "Página web desarrollada para POS de Honduras, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
-  image: "/img/posdehonduras.png", // Imagen representativa de tu proyecto
-  technologies: ["HTML", "CSS", "JavaScript","Wordpress"], // Tecnologías que usaste
-  githubUrl: "", // Lo dejas vacío si no tienes el repositorio
-  liveUrl: "https://www.posdehonduras.com/",
-  stars: 55,
-  forks: 70,
-  
-  features: [
-    "Diseño responsivo",
-    "Interfaz amigable",
-    "Galería de productos",
-    "Información de contacto"
-  ],
-  
-  buttons: {
-    preview: {
-      text: "Vista Previa",
-      url: "https://www.posdehonduras.com/",
-      icon: "Eye"
-    },
-    demo: {
-      text: "Ver Demo",
-      url: "https://www.posdehonduras.com/",
-      icon: "ExternalLink"
-    },
-    code: {
-      text: "Ver Código",
-      url: "",
-      icon: "Github"
-    }
-  },
-  
-  category: "Proyectos Web",
-  tags: ["HTML", "CSS", "JavaScript", "Web","Wordpress"]
-},
- {
-  title: "Milca's Store",
-  description: "Página web desarrollada para Milca's store, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
-  image: "/img/Milcas.png", // Imagen representativa de tu proyecto
-  technologies: ["HTML", "CSS", "JavaScript"], // Tecnologías que usaste
-  githubUrl: "https://github.com/CristhopherNu/Huellas-de-amor",
-  liveUrl: "https://cristhophernu.github.io/Tienda-Milcas/",
-  stars: 18,
-  forks: 20,
-  
-  features: [
-    "Diseño responsivo",
-    "Interfaz amigable",
-    "Galería de productos",
-    "Información de contacto"
-  ],
-  
-  buttons: {
-    preview: {
-      text: "Vista Previa",
-      url: "https://cristhophernu.github.io/Tienda-Milcas/",
-      icon: "Eye"
-    },
-    demo: {
-      text: "Ver Demo",
-      url: "https://cristhophernu.github.io/Tienda-Milcas/",
-      icon: "ExternalLink"
-    },
-    code: {
-      text: "Ver Código",
-      url: "https://github.com/CristhopherNu/Tienda-Milcas",
-      icon: "Github"
-    }
-  },
-  
-  category: "Proyectos Web",
-  tags: ["HTML", "CSS", "JavaScript", "Web"]
-}
+    title: "Huellas de Amor",
+    description:
+      "Plataforma web para la Fundación Huellas de Amor, dedicada al rescate y cuidado de perros y gatos abandonados o en situación de vulnerabilidad. La plataforma facilita la adopción responsable, donaciones y voluntariado para ayudar a estos animales a encontrar un hogar lleno de amor.",
+    image: "/img/HuellasdeAmor.png", // Imagen que refleje el proyecto de rescate animal
+    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+    githubUrl: "https://github.com/CristhopherNu/Huellas-de-amor",
+    liveUrl: "https://cristhophernu.github.io/Huellas-de-amor/",
+    stars: 124,
+    forks: 32,
 
+    // Información adicional específica del proyecto
+    features: [
+      "Sistema de adopciones en línea",
+      "Galería de animales disponibles",
+      "Portal de donaciones",
+      "Gestión de voluntarios",
+      "Historias de éxito",
+      "Sistema de contacto y seguimiento",
+    ],
+
+    // Botones de acción
+    buttons: {
+      preview: {
+        text: "Vista Previa",
+        url: "https://cristhophernu.github.io/Huellas-de-amor/",
+        icon: "Eye",
+      },
+      demo: {
+        text: "Ver Demo",
+        url: "https://cristhophernu.github.io/Huellas-de-amor/",
+        icon: "ExternalLink",
+      },
+      code: {
+        text: "Ver Código",
+        url: "https://github.com/CristhopherNu/Huellas-de-amor",
+        icon: "Github",
+      },
+    },
+
+    // Categoría del proyecto
+    category: "Impacto Social",
+    tags: ["Adopción", "Rescate Animal", "ONG", "Voluntariado", "Donaciones"],
+  },
+  {
+    title: "POS de Honduras",
+    description:
+      "Página web desarrollada para POS de Honduras, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
+    image: "/img/posdehonduras.png", // Imagen representativa de tu proyecto
+    technologies: ["HTML", "CSS", "JavaScript", "Wordpress"], // Tecnologías que usaste
+    githubUrl: "", // Lo dejas vacío si no tienes el repositorio
+    liveUrl: "https://www.posdehonduras.com/",
+    stars: 55,
+    forks: 70,
+
+    features: ["Diseño responsivo", "Interfaz amigable", "Galería de productos", "Información de contacto"],
+
+    buttons: {
+      preview: {
+        text: "Vista Previa",
+        url: "https://www.posdehonduras.com/",
+        icon: "Eye",
+      },
+      demo: {
+        text: "Ver Demo",
+        url: "https://www.posdehonduras.com/",
+        icon: "ExternalLink",
+      },
+      code: {
+        text: "Ver Código",
+        url: "",
+        icon: "Github",
+      },
+    },
+
+    category: "Proyectos Web",
+    tags: ["HTML", "CSS", "JavaScript", "Web", "Wordpress"],
+  },
+  {
+    title: "Milca's Store",
+    description:
+      "Página web desarrollada para Milca's store, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
+    image: "/img/Milcas.png", // Imagen representativa de tu proyecto
+    technologies: ["HTML", "CSS", "JavaScript"], // Tecnologías que usaste
+    githubUrl: "https://github.com/CristhopherNu/Tienda-Milcas",
+    liveUrl: "https://cristhophernu.github.io/Tienda-Milcas/",
+    stars: 18,
+    forks: 20,
+
+    features: ["Diseño responsivo", "Interfaz amigable", "Galería de productos", "Información de contacto"],
+
+    buttons: {
+      preview: {
+        text: "Vista Previa",
+        url: "https://cristhophernu.github.io/Tienda-Milcas/",
+        icon: "Eye",
+      },
+      demo: {
+        text: "Ver Demo",
+        url: "https://cristhophernu.github.io/Tienda-Milcas/",
+        icon: "ExternalLink",
+      },
+      code: {
+        text: "Ver Código",
+        url: "https://github.com/CristhopherNu/Tienda-Milcas",
+        icon: "Github",
+      },
+    },
+
+    category: "Proyectos Web",
+    tags: ["HTML", "CSS", "JavaScript", "Web"],
+  },
 ]
 
 export function ProjectsSection() {
@@ -141,7 +133,11 @@ export function ProjectsSection() {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"])
 
   return (
-    <motion.section ref={ref} style={{ y }} className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+    <motion.section
+      ref={ref}
+      style={{ y }}
+      className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-muted/30 relative overflow-hidden"
+    >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0 opacity-5">
         <div className="absolute top-10 sm:top-20 right-1/4 w-40 h-40 sm:w-72 sm:h-72 bg-secondary/30 rounded-full blur-2xl sm:blur-3xl" />
         <div className="absolute bottom-5 sm:bottom-10 left-1/3 w-32 h-32 sm:w-56 sm:h-56 bg-primary/30 rounded-full blur-xl sm:blur-2xl" />
@@ -181,40 +177,31 @@ export function ProjectsSection() {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                   />
-                  <motion.div
-                    className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    {project.githubUrl && (
-                      <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        whileHover={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 }}
-                      >
-                        <Button size="sm" variant="secondary" asChild className="text-xs sm:text-sm">
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-                            <span className="hidden xs:inline">Código</span>
-                            <span className="xs:hidden">Code</span>
-                          </a>
-                        </Button>
-                      </motion.div>
-                    )}
-                    <motion.div
-                      initial={{ y: 20, opacity: 0 }}
-                      whileHover={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.2 }}
+                </div>
+
+                <div className="p-3 sm:p-4 border-b">
+                  <div className="flex items-center justify-center gap-3">
+                    <Button
+                      size="sm"
+                      variant="default"
+                      asChild
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-sm flex-1 max-w-[120px]"
                     >
-                      <Button size="sm" variant="secondary" asChild className="text-xs sm:text-sm">
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
-                          <span className="hidden xs:inline">Demo</span>
-                          <span className="xs:hidden">Ver</span>
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Ver Demo
+                      </a>
+                    </Button>
+
+                    {project.githubUrl && (
+                      <Button size="sm" variant="outline" asChild className="flex-1 max-w-[120px] bg-transparent">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Código
                         </a>
                       </Button>
-                    </motion.div>
-                  </motion.div>
+                    )}
+                  </div>
                 </div>
 
                 <CardHeader className="p-3 sm:p-4 md:p-6">
@@ -268,9 +255,7 @@ export function ProjectsSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className="text-center mt-8 sm:mt-12"
-        >
-         
-        </motion.div>
+        ></motion.div>
       </div>
     </motion.section>
   )
