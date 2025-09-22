@@ -81,12 +81,12 @@ export function SkillsSection() {
     <motion.section
       ref={ref}
       style={{ y }}
-      className="py-12 sm:py-16 md:py-20 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden"
+      className="py-20 px-4 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden"
     >
       <motion.div style={{ y: backgroundY }} className="absolute inset-0 opacity-5">
-        <div className="absolute top-5 sm:top-10 left-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl sm:blur-3xl" />
-        <div className="absolute bottom-10 sm:bottom-20 right-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full blur-xl sm:blur-2xl" />
-        <div className="absolute top-1/2 left-5 sm:left-10 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full blur-lg sm:blur-xl" />
+        <div className="absolute top-10 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full blur-2xl" />
+        <div className="absolute top-1/2 left-10 w-48 h-48 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full blur-xl" />
       </motion.div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -95,17 +95,17 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent px-4">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Herramientas & Tecnologías
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Dominio de herramientas modernas para desarrollo, análisis de datos, diseño y gestión de proyectos
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -121,32 +121,30 @@ export function SkillsSection() {
               onHoverStart={() => setHoveredCard(index)}
               onHoverEnd={() => setHoveredCard(null)}
               whileHover={{
-                y: -4,
+                y: -8,
                 transition: { duration: 0.2 },
               }}
             >
               <Card
-                className={`h-56 sm:h-64 transition-all duration-300 cursor-pointer border-2 ${category.hoverColor} hover:shadow-xl hover:shadow-primary/5 backdrop-blur-sm bg-background/90 group`}
+                className={`h-64 transition-all duration-300 cursor-pointer border-2 ${category.hoverColor} hover:shadow-xl hover:shadow-primary/5 backdrop-blur-sm bg-background/90 group`}
               >
-                <CardHeader className="pb-3 sm:pb-4 p-3 sm:p-6">
-                  <CardTitle className="flex flex-col items-center gap-2 sm:gap-4 text-center">
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex flex-col items-center gap-4 text-center">
                     <motion.div
-                      className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl ${category.color} transition-all duration-300`}
+                      className={`p-4 rounded-2xl ${category.color} transition-all duration-300`}
                       animate={{
                         rotate: hoveredCard === index ? 360 : 0,
                         scale: hoveredCard === index ? 1.1 : 1,
                       }}
                       transition={{ duration: 0.6 }}
                     >
-                      <category.icon className="w-6 h-6 sm:w-8 sm:h-8" />
+                      <category.icon className="w-8 h-8" />
                     </motion.div>
-                    <span className="text-sm sm:text-base md:text-lg font-semibold leading-tight text-center">
-                      {category.title}
-                    </span>
+                    <span className="text-lg font-semibold leading-tight">{category.title}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0 p-3 sm:p-6">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 justify-center">
+                <CardContent className="pt-0">
+                  <div className="flex flex-wrap gap-2 justify-center">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div
                         key={skill}
@@ -161,7 +159,7 @@ export function SkillsSection() {
                       >
                         <Badge
                           variant="secondary"
-                          className="text-xs font-medium px-2 sm:px-3 py-1 bg-muted/50 hover:bg-muted transition-colors duration-200"
+                          className="text-xs font-medium px-3 py-1 bg-muted/50 hover:bg-muted transition-colors duration-200"
                         >
                           {skill}
                         </Badge>
@@ -179,9 +177,9 @@ export function SkillsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
-          className="mt-12 sm:mt-16 md:mt-20 text-center"
+          className="mt-20 text-center"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
               { number: "13+", label: "Herramientas" },
               { number: "8", label: "Categorías" },
@@ -195,10 +193,10 @@ export function SkillsSection() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/10"
+                className="p-6 rounded-2xl bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/10"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">{stat.number}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
