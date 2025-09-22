@@ -54,7 +54,7 @@ const projects = [
   {
   title: "POS de Honduras",
   description: "Página web desarrollada para POS de Honduras, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
-  image: "/img/POSdeHonduras.png", // Imagen representativa de tu proyecto
+  image: "/img/posdehonduras.png", // Imagen representativa de tu proyecto
   technologies: ["HTML", "CSS", "JavaScript","Wordpress"], // Tecnologías que usaste
   githubUrl: "", // Lo dejas vacío si no tienes el repositorio
   liveUrl: "https://www.posdehonduras.com/",
@@ -92,7 +92,7 @@ const projects = [
  {
   title: "Milca's Store",
   description: "Página web desarrollada para Milca's store, mostrando información de productos y servicios ofrecidos, con diseño responsivo y experiencia de usuario optimizada.",
-  image: "/img/milcas.png", // Imagen representativa de tu proyecto
+  image: "/img/Milcas.png", // Imagen representativa de tu proyecto
   technologies: ["HTML", "CSS", "JavaScript"], // Tecnologías que usaste
   githubUrl: "https://github.com/CristhopherNu/Huellas-de-amor",
   liveUrl: "https://cristhophernu.github.io/Tienda-Milcas/",
