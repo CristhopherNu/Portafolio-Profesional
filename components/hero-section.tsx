@@ -310,7 +310,7 @@ export function HeroSection() {
                 </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <a href="/pdf/CV Cristopher-Nuñez-Web-Master.pdf" download>
+                <a href="/pdf/CV-Cristopher-Nuñez-Web-Master.pdf" download>
                 <Button
                   variant="outline"
                   size="lg"
